@@ -1,10 +1,11 @@
-package api
+package pkg
 
 type Response struct {
 	Tennis_players []Tennis_player `json:"players"`
 }
 
 type Tennis_player struct {
+	Id int `json:"id"`
 	FirstName string `json:"first_name"`
 	LastName  string `json:"last_name"`
 	Gender string `json:"gender"`
@@ -13,10 +14,11 @@ type Tennis_player struct {
 
 }
 
-func prepareResponse() []Tennis_player {
+func PrepareResponse() []Tennis_player {
 	var tennis_players []Tennis_player
    
 	var player Tennis_player
+	player.Id = 1
 	player.FirstName = "Novak"
 	player.LastName = "Djokovic"
 	player.Gender = "Male"
@@ -24,6 +26,7 @@ func prepareResponse() []Tennis_player {
 	player.Wins = 40
 	tennis_players = append(tennis_players, player)
    
+	player.Id = 2
 	player.FirstName = "Alexander"
 	player.LastName = "Zverev"
 	player.Gender = "Male"
@@ -31,6 +34,7 @@ func prepareResponse() []Tennis_player {
 	player.Wins = 21
 	tennis_players = append(tennis_players, player)
    
+	player.Id = 3
 	player.FirstName = "Elena"
 	player.LastName = "Rybakina"
 	player.Gender = "Female"
@@ -38,6 +42,7 @@ func prepareResponse() []Tennis_player {
 	player.Wins = 6
 	tennis_players = append(tennis_players, player)
    
+	player.Id = 4
 	player.FirstName = "Serena"
 	player.LastName = "Williams"
 	player.Gender = "Female"
@@ -45,6 +50,7 @@ func prepareResponse() []Tennis_player {
 	player.Wins = 39
 	tennis_players = append(tennis_players, player)
    
+	player.Id = 5
 	player.FirstName = "Rafael"
 	player.LastName = "Nadal"
 	player.Gender = "Male"
